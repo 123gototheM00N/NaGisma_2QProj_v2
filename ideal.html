@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Ideas</title>
+    <link rel="stylesheet" type="text/css" href="ideal.css">
+</head>
+<body>
+    <header>
+        <div class="Heads">
+            <img src="../media/Greenhouse Busters.jpg" alt="Greenhouse Busters Logo" width="235" height="215">
+        </div>
+        </header>
+        <nav>
+            <a href="index.html"class="grow">Home</a>
+            <a href="advo.html" class="grow">Advocacy</a>
+            <a href="about.html"class="grow">About Me</a>
+            <a href="ideal.html"class="grow">Your Ideas</a>
+        </nav>
+    
+    <main>
+        <div class="clearfix">
+            <section id="your-ideas">
+                <h2>Can Your Ideas Change the WORLD?</h2>
+                <p>With regard to the above aim of providing solutions by providing any possible steps the users and societies may follow that will help to reduce emission of the greenhouse gases, your suggestions may include anything from promoting energy saving, use of the environment-friendly means of transportation, reducing waste, and earth-friendly measures.</p>
+
+                <form id="ideaForm">
+                    <label for="idea-title">Idea Title:</label><br>
+                    <input type="text" id="idea-title" name="idea-title" required><br><br>
+                    
+                    <label for="idea-description">Your Idea:</label><br>
+                    <textarea id="idea-description" name="idea-description" rows="10" cols="50" required></textarea><br><br>
+                    
+                    <input type="submit" value="Submit Idea">
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Made by: Gisma & Nature Inc.</p>
+    </footer>
+    
+    <script>
+        document.getElementById('ideaForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get the form data
+            const ideaTitle = document.getElementById('idea-title').value;
+            const ideaDescription = document.getElementById('idea-description').value;
+
+            // Save the data to local storage
+            localStorage.setItem('submittedTitle', ideaTitle);
+            localStorage.setItem('submittedDescription', ideaDescription);
+
+            // Redirect to the success page
+            window.location.href = 'success.html';
+        });
+    </script>
+</body>
+</html>

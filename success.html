@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Successful!</title>
+    <link rel="stylesheet" type="text/css" href="success.css">
+</head>
+<body>
+    <h1>Thank you for your idea!</h1>
+    <div id="submitted-content">
+        <h2>Your submitted idea:</h2>
+        <p><strong>Title:</strong> <span id="display-title"></span></p>
+        <p><strong>Description:</strong> <span id="display-description"></span></p>
+    </div>
+    <a href="ideal.html">Submit another idea</a>
+
+    <script>
+        const submittedTitle = localStorage.getItem('submittedTitle');
+        const submittedDescription = localStorage.getItem('submittedDescription');
+
+        document.getElementById('display-title').textContent = submittedTitle;
+        document.getElementById('display-description').textContent = submittedDescription;
+
+        localStorage.removeItem('submittedTitle');
+        localStorage.removeItem('submittedDescription');
+    </script>
+</body>
+</html>

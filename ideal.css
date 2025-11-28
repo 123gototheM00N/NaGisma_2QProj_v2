@@ -1,0 +1,69 @@
+body {
+    background-color: lightgray;
+    font-family: Cambria, Cochin, Georgia, Arial, Helvetica, sans-serif;
+}
+.Heads {
+    overflow: auto;
+    border-bottom: 5px solid black;
+}
+.Heads img {
+    float: left;
+    margin-right: 15px;
+}    
+.Heads h1 {
+    float: left;
+}
+h2 {
+    color: black;
+    animation-name: myAnimation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    margin-top: 30px;
+    display: inline-block;
+}
+@keyframes myAnimation {
+  0%   {color: red;}
+  10%  {color: orangered;}
+  20%  {color: orange;}
+  40%  {color: yellow;}
+  50%  {color: yellowgreen;}
+  60% {color: green;}
+  70% {color: teal;}
+  80%  {color: blue;}
+  90% {color: violet;}
+  100%  {color: purple;}
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+nav {
+    background-color: green;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 20px;
+    border: 2px solid darkolivegreen;
+}
+.grow {
+    margin: 10px;
+    border: 2px solid cadetblue;
+    display: inline-block;
+    background-color: red;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+}
+.grow:hover {
+    background-color: orange;
+    transform: scale(1.5);
+}
+a:visited {
+    color: yellow;
+}
+footer {
+    margin-top: 50px;
+    text-align: center;
+    border: 2px solid darkolivegreen;
+    background-color: green;
+}

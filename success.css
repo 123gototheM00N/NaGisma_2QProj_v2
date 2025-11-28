@@ -1,0 +1,16 @@
+        body {
+            background-color: lightgray;
+            font-family: Cambria, Cochin, Georgia, Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        #submitted-content {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: left;
+        }
