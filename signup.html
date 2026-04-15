@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+    body {
+    background-color: grey;
+    }
+    #drippin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blanchedalmond;
+    border: 2px solid black;
+    margin-left: 500px;
+    margin-right: 500px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #hello {
+    background-color: red;
+    animation-name: myAnimation;
+    animation-duration: 6s;
+    }
+    @keyframes myAnimation {
+    0% {background-color: red;}
+    20% {background-color: orange}
+    40% {background-color: yellow;}
+    60% {background-color: green;}
+    80% {background-color: blue;}
+    100%{background-color: purple}
+    }
+    </style>
+</head>
+<body>
+
+    <div id="drippin">
+<form id="signupForm" onsubmit="return validateForm();" novalidate>
+        <h2 id="hello">Create Your Account</h2>
+        
+        <label for="fname">Full Name:</label><br>
+        <input type="text" id="fname" name="fname" required>
+        <span id="nameErr" class="error"></span><br><br>
+
+        <label for="bday">Birthday:</label><br>
+        <input type="date" id="bday" name="bday" required>
+        <span id="dateErr" class="error"></span><br><br>
+
+        <label>Sex:</label><br>
+        <input type="radio" name="sex" value="Male"> Male
+        <input type="radio" name="sex" value="Female"> Female
+        <input type="radio" name="sex" value="Other"> Other
+        <span id="sexErr" class="error"></span><br><br>
+
+        <label for="mail">Email:</label><br>
+        <input type="email" id="mail" name="mail" required>
+        <span id="mailErr" class="error"></span><br><br>
+
+        <label for="uname">Username:</label><br>
+        <input type="text" id="uname" name="uname" required>
+        <span id="userErr" class="error"></span><br><br>
+
+        <label for="psc">Password:</label><br>
+        <input type="password" id="psc" name="psc" required>
+        <span id="passErr" class="error"></span><br><br>
+
+        <label for="confirm">Confirm Password:</label><br>
+        <input type="password" id="confirm" name="confirm" required>
+        <span id="confirmErr" class="error"></span><br><br>
+
+        <hr>
+        <label for="interest">What is your primary interest?</label><br>
+        <select id="interest" name="interest">
+            <option value="">-- Select One --</option>
+            <option value="coding">Coding</option>
+            <option value="design">Design</option>
+            <option value="marketing">Marketing</option>
+        </select>
+        <span id="selectErr" class="error"></span><br><br>
+
+        <label>Which tools do you use? (Check at least one):</label><br>
+        <input type="checkbox" name="tools" value="html"> HTML
+        <input type="checkbox" name="tools" value="css"> CSS
+        <input type="checkbox" name="tools" value="js"> JavaScript
+        <span id="checkErr" class="error"></span><br><br>
+
+        <label for="experience">Years of experience:</label><br>
+        <input type="number" id="experience" name="experience" min="0">
+        <span id="numErr" class="error"></span><br><br>
+
+        <input type="submit" value="Join the Dev Team!"> 
+    </form>
+    </div>
+
+    <p id="successMsg"></p>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
