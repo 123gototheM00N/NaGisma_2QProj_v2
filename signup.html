@@ -14,22 +14,27 @@
     align-items: center;
     background-color: blanchedalmond;
     border: 2px solid black;
-    margin-left: 500px;
-    margin-right: 500px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     #hello {
-    background-color: red;
+    background-color: green;
     animation-name: myAnimation;
     animation-duration: 6s;
     }
     @keyframes myAnimation {
-    0% {background-color: red;}
-    20% {background-color: orange}
-    40% {background-color: yellow;}
-    60% {background-color: green;}
-    80% {background-color: blue;}
-    100%{background-color: purple}
+    0% {background-color: green;}
+    25% {background-color: limegreen}
+    50% {background-color: lime;}
+    75% {background-color: greenyellow;}
+    100% {background-color: yellow;}
+    }
+    #linky{
+        display: flex;
+        background-color: greenyellow;
+        border: 2px solid black;
+        width: 400px;
+        text-align: left;
+        padding: 10px;
     }
     </style>
 </head>
@@ -70,30 +75,31 @@
         <span id="confirmErr" class="error"></span><br><br>
 
         <hr>
-        <label for="interest">What is your primary interest?</label><br>
+        <label for="interest">What Nature related topic are you into?</label><br>
         <select id="interest" name="interest">
             <option value="">-- Select One --</option>
-            <option value="coding">Coding</option>
-            <option value="design">Design</option>
-            <option value="marketing">Marketing</option>
+            <option value="agriculture">Agriculture</option>
+            <option value="biology">Biology</option>
+            <option value="zoology">Zoology</option>
         </select>
         <span id="selectErr" class="error"></span><br><br>
 
-        <label>Which tools do you use? (Check at least one):</label><br>
-        <input type="checkbox" name="tools" value="html"> HTML
-        <input type="checkbox" name="tools" value="css"> CSS
-        <input type="checkbox" name="tools" value="js"> JavaScript
+        <label>Which flowers do you like? (Check at least one):</label><br>
+        <input type="checkbox" name="flowers" value="hibiscus"> Hibiscus
+        <input type="checkbox" name="flowers" value="dahila"> Dahila
+        <input type="checkbox" name="flowers" value="sunflower"> Sunflower
         <span id="checkErr" class="error"></span><br><br>
 
-        <label for="experience">Years of experience:</label><br>
-        <input type="number" id="experience" name="experience" min="0">
+        <label for="scale">On a scale of 1 to 10, how often do you garden:</label><br>
+        <input type="number" id="scale" name="scale" max="10">
         <span id="numErr" class="error"></span><br><br>
 
-        <input type="submit" value="Join the Dev Team!"> 
+        <input type="submit" value="Join the Busters!"> 
     </form>
     </div>
 
     <p id="successMsg"></p>
+    <p id="linky">If you don't wan't to Sign up, then you can go <a href="index.html">Home</a></p>
 
 <script src="script.js"></script>
 
